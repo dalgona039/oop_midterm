@@ -98,14 +98,39 @@ int Ex5(char* dest, const char* src)
 // Ex6 선언
 int** Ex6(int row, int col)
 {
-	return 0;
+	int** pp = new int*[row];
+	for (int i = 0; i < row; ++i)
+	{
+		pp[i] = new int[col];
+		for (int j = 0; j < col; ++j)
+		{
+			pp[i][j] = (i+1)*10 + (j+1);
+		}
+	}
+	return pp;
 }
 
 // Print 선언
-// void Print(int** pp, int row, int col);
+void Print(int** pp, int row, int col)
+{
+	for (int i = 0; i < row; ++i)
+	{
+		for (int j = 0; j < col; ++j)
+		{
+			std::cout << pp[i][j] << " ";
+		}
+		std::cout << std::endl;
+	}
+}
 
 // Ex7 선언
-// void Ex7(char& c);
+void Ex7(char& c)
+{
+	if (c >= 'a' && c <= 'z')
+	{
+		c = c - 'a' + 'A';
+	}
+}
 
 int main() {
 	// 문제 1
@@ -161,20 +186,16 @@ int main() {
 	
 	
 	// 문제 6
-	/*
 	std::cout << "\n### 6 ###" << std::endl;
 	int** pp = Ex6(3, 4);
 	Print(pp, 3, 4);
-	*/
 	
 	// 문제 7
-	/*
 	std::cout << "\n### 7 ###" << std::endl;
 	char str7[100] = "abX1at3x~#+cT";
 	for(int i = 0 ; i < strlen(str7); ++i)
 		Ex7(str7[i]);
 	std::cout << str7 << std::endl;
-	*/
 	
 	return 0;
 }
