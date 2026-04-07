@@ -1,2 +1,25 @@
-/2025_2_CSE103_00.cpp
-/2025_2_CSE103_00.dSYM
+# 컴파일 결과물
+*.o
+*.out
+*.a
+*.so
+
+# 실행 파일 (확장자 없음)
+2025_2_CSE103_00
+
+# 디버그 심볼
+*.dSYM/
+*.dSYM
+
+# macOS
+.DS_Store
+*.swp
+*.swo
+*~
+
+# VS Code
+.vscode/
+
+# IDE
+.idea/
+*.iml
