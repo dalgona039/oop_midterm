@@ -3,16 +3,55 @@
 using namespace std;
 
 // Fn1 선언
-// double Fn1(double a, double b);
+double Fn1(double a, double b)
+{
+	double p = 0;
+
+	p = a + b;
+	return p;
+
+}
 
 // Fn2 선언
-// double* Fn2(double* a, int n);
+double* Fn2(double* a, int n)
+{
+	double* p = &a[0];
+
+	for (int i = 1; i < n; ++i)  
+	{
+		if (a[i] > *p)
+		{
+			p = &a[i];
+		}
+	}
+	return p; 
+}
 
 // Fn3 선언
-// double Fn3(double a, double b, double& max);
+double Fn3(double a, double b, double& max)
+{	
+	
+	double diff = 0;
+
+	if (a >= b)
+	{
+		max = a ;
+		diff = double (a - b);
+	}
+
+	else 
+	{
+		max = b;
+		diff = double (b - a);
+	}
+
+	return diff;
+
+}
 
 // Fn4 선언
-// void Fn4(double a[][3], int n);
+//void Fn4(double a[][3], int n)
+
 
 // Fn5 선언
 // double Fn5(double (*f)(double), double x);
@@ -41,13 +80,13 @@ void Print(double a[][3], int n) {
 
 int main() {
 	// 문제 1
-	/*
+	
 	std::cout << "### 1 ###" << std::endl;
 	std::cout << Fn1(3.3, 2.2) << " " << Fn1(2.7, 3.9) << std::endl;
-	*/
+	
 	
 	// 문제 2
-	/*
+	
 	std::cout << "\n### 2 ###" << std::endl;
 	double a1[3] = { 9.9, 5.7, 1.2 };
 	double a2[5] = { 3.5, 2.5, -7.1, 9.1, -1.3 };
@@ -57,17 +96,17 @@ int main() {
 	Print(a1, 3);
 	p = Fn2(a2, 5);
 	std::cout << *p << std::endl;
-	*/
+	
 	
 	// 문제 3
-	/*
+	
 	std::cout << "\n### 3 ###" << std::endl;
 	double max, diff;
 	diff = Fn3(3.2, 2.7, max);
 	std::cout << max << " " << diff << std::endl;
 	diff = Fn3(2.1, 12.6, max);
 	std::cout << max << " " << diff << std::endl;
-	*/
+	
 	
 	// 문제 4
 	/*

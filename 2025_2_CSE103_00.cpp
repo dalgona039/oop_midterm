@@ -30,7 +30,7 @@ int Ex1(int a, int b)
 // Ex2 선언
 bool Ex2(double* a, double* b)
 {
-    if (*a <= *b)  // 포인터가 가리키는 값을 비교
+    if (*a <= *b)  
     {
         return true;
     }
