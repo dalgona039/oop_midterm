@@ -4,13 +4,41 @@
 using namespace std;
 
 // Fn1 선언
-// int Fn1(int a, int b);
+int Fn1(int a, int b)
+{
+    int p = 0;
+
+    if (a >= b)
+    {
+        p = a - b;
+    }
+
+    else 
+    {
+        p = b - a;
+    }
+
+    return p;
+}
 
 // Fn2 선언
-// int Fn2(int* a, int* b);
+int Fn2(int* a, int* b)
+{
+    if ( *a >= *b )
+    {
+        return *a;
+    }
+
+    else 
+    {
+        return *b;
+    }
+}
+
 
 // Fn3 선언
-// void Fn3(int n, int& sum);
+//void Fn3(int n, int& sum)
+
 
 // Fn4 선언
 // std::vector<double> Fn4(std::vector<double>& v);
@@ -49,13 +77,13 @@ void Print(std::vector<std::vector<int>>& v) {
 
 int main() {
 	// 문제 1
-	/*
+	
 	std::cout << "### 1 ###" << std::endl;
 	std::cout << Fn1(3, 2) << " " << Fn1(3, 0) << " " << Fn1(2, 9) << std::endl;
-	*/
+	
 	
 	// 문제 2
-	/*
+	
 	std::cout << "\n### 2 ###" << std::endl;
 	int x1 = 2, x2 = 5;
 	std::cout << Fn2(&x1, &x2) << std::endl;
@@ -63,7 +91,7 @@ int main() {
 	std::cout << Fn2(&x1, &x2) << std::endl;
 	x1 = x2 = 5;
 	std::cout << Fn2(&x1, &x2) << std::endl;
-	*/
+	
 	
 	// 문제 3
 	/*
