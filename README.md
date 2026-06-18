@@ -1,3 +1,5 @@
+[DeepL Translation of dalgona039/oop_midterm]
+
 # 경희대학교 객체지향프로그래밍 중간고사 족보 풀이
 
 ## 컴파일 및 실행
